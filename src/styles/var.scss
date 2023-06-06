@@ -1,0 +1,122 @@
+body,
+html,
+page {
+  padding: 0;
+  margin: 0;
+  font-size: var(--g-text-size);
+  background: #fafafa;
+}
+:root,
+page {
+  // 主题色
+  --theme-color: #47c6a8;
+  // 淡主题色
+  --theme-light-color: #b6f8ea;
+  // 屏幕长宽切换的动画时间
+  --change-transition: all 0.5s;
+  // 底部操作栏高度
+  --footer-height: calc(88px * var(--size));
+  // 全局字体大小
+  --g-text-size: calc(32px * var(--size));
+  // footer的字体大小
+  --footer-text-size: 14px;
+  // header高度
+  --header-height: calc(80px * var(--size));
+  // header的title距离左边的距离
+  --header-left: calc(77px * var(--size));
+  // header距离内容页的边距
+  --header-bootom: calc(77px * var(--size));
+}
+
+/*---------------------以下是网页适配，从pc到移动端-------------------*/
+
+/*当页面宽度大于280px且小于320px的时候执行，280-320*/
+@media screen and (min-width: 280px) and (max-width: 320px) {
+  :root,
+  page {
+    // 设计稿和屏幕大小的计算比例
+    --size: calc(280 / 750);
+  }
+}
+/*当页面宽度大于320px且小于360px的时候执行，320-360*/
+@media screen and (min-width: 320px) and (max-width: 360px) {
+  :root,
+  page {
+    // 设计稿和屏幕大小的计算比例
+    --size: calc(320 / 750);
+  }
+}
+/*当页面宽度大于360px且小于390px的时候执行，360-390*/
+@media screen and (min-width: 360px) and (max-width: 390px) {
+  :root,
+  page {
+    // 设计稿和屏幕大小的计算比例
+    --size: calc(360 / 750);
+  }
+}
+/*当页面宽度大于390px且小于460px的时候执行，390-460*/
+@media screen and (min-width: 390px) and (max-width: 460px) {
+  :root,
+  page {
+    // 设计稿和屏幕大小的计算比例
+    --size: calc(390 / 750);
+  }
+}
+/*当页面宽度大于390px且小于460px的时候执行，390-460*/
+// @media screen and (min-width: 391px) and (max-width: 460px) {
+//   :root,
+//   page {
+//     // 设计稿和屏幕大小的计算比例
+//     --size: calc(390 / 750);
+//   }
+// }
+
+/*当页面宽度大于460px且小于1000px的时候执行，460-1000*/
+@media screen and (min-width: 460px) and (max-width: 1000px) {
+  :root,
+  page {
+    // 设计稿和屏幕大小的计算比例
+    --size: calc(460 / 750);
+  }
+}
+/*当页面宽度大于1000px且小于1200px的时候执行，1000-1200*/
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  :root,
+  page {
+    // 设计稿和屏幕大小的计算比例
+    --size: calc(1000 / 750);
+    --header-height: calc(80px);
+  }
+}
+/*当页面宽度大于1280px且小于1366px的时候执行,1280-1366*/
+@media screen and (min-width: 1280px) and (max-width: 1366px) {
+  :root,
+  page {
+    // 设计稿和屏幕大小的计算比例
+    --size: calc(1280 / 750);
+  }
+}
+/*当页面宽度大于1440px且小于1600px的时候执行,1440-1600*/
+@media screen and (min-width: 1440px) and (max-width: 1600px) {
+  :root,
+  page {
+    // 设计稿和屏幕大小的计算比例
+    --size: calc(1440 / 750);
+  }
+}
+/*当页面宽度大于1680px且小于1920px的时候执行,1680-1920*/
+@media screen and (min-width: 1680px) and (max-width: 1920px) {
+  :root,
+  page {
+    // 设计稿和屏幕大小的计算比例
+    --size: calc(1680 / 750);
+  }
+}
+/*当页面宽度大于1680px且小于1920px的时候执行,1680-1920*/
+@media screen and (min-width: 1920px) {
+  :root,
+  page {
+    // 设计稿和屏幕大小的计算比例
+    --size: calc(1920 / 750);
+  }
+}
