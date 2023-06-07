@@ -6,7 +6,12 @@
       marginBottom: platform === 'ios' ? '10px' : '0px',
     }"
   >
-    <div class="footer-item" v-for="(item, index) in footerMenu" :key="index">
+    <div
+      class="footer-item"
+      v-for="(item, index) in footerMenu"
+      :key="index"
+      @click.stop="handleChangeRouter(index)"
+    >
       <img :src="item.check ? item.checkIcon : item.icon" />
       <span>{{ item.name }}</span>
     </div>
@@ -14,41 +19,15 @@
 </template>
 
 <script lang="ts" name="CustomContent" setup>
-import type { FooterMenu } from "../../types/Layout/index";
+import { footerMenu } from "../../utils/enum";
 const platform: string = uni.getSystemInfoSync().platform;
-// 底部菜单
-const footerMenu: FooterMenu[] = [
-  {
-    name: "记账",
-    icon: "../../static/img/footer/1.png",
-    checkIcon: "../../static/img/footer/1-check.png",
-    check: false,
-  },
-  {
-    name: "统计",
-    icon: "../../static/img/footer/2.png",
-    checkIcon: "../../static/img/footer/2-check.png",
-    check: false,
-  },
-  {
-    name: "",
-    icon: "../../static/img/footer/add.png",
-    checkIcon: "../../static/img/footer/add.png",
-    check: false,
-  },
-  {
-    name: "赚钱",
-    icon: "../../static/img/footer/3.png",
-    checkIcon: "../../static/img/footer/3-check.png",
-    check: false,
-  },
-  {
-    name: "我的",
-    icon: "../../static/img/footer/4.png",
-    checkIcon: "../../static/img/footer/4-check.png",
-    check: false,
-  },
-];
+
+const emit = defineEmits(["currentIndex"]);
+
+// 跳转页面
+const handleChangeRouter = (index?: number) => {
+  emit("currentIndex", index);
+};
 </script>
 <style lang="scss" scoped>
 .footer {
@@ -85,6 +64,7 @@ const footerMenu: FooterMenu[] = [
   image {
     width: calc(100px * var(--size));
     height: calc(100px * var(--size));
+    margin-bottom: 0px;
   }
 }
 </style>

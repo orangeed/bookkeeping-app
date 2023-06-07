@@ -1,7 +1,8 @@
-<!-- 首页 -->
+<!-- 统计 -->
 <template>
   <CustomHeader />
-  <CustomContent> 首页 </CustomContent>
+  <!-- <CustomContent> 统计 </CustomContent> -->
+  统计
 </template>
 
 <script lang="ts" src="./index.ts" />

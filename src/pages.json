@@ -1,7 +1,19 @@
 {
   "pages": [
     {
-      "path": "pages/index/index"
+      "path": "Layout/CustomContent/index"
+    },
+    {
+      "path": "pages/bookkeeping/index"
+    },
+    {
+      "path": "pages/statistics/index"
+    },
+    {
+      "path": "pages/bill/index"
+    },
+    {
+      "path": "pages/my/index"
     }
   ],
   "globalStyle": {

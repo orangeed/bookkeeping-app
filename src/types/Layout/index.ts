@@ -3,4 +3,5 @@ export interface FooterMenu {
   icon: string;
   checkIcon: string;
   check: boolean;
+  url?: string;
 }
