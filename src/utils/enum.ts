@@ -1,38 +1,13 @@
-// 底部菜单
-import type { FooterMenu } from "../types/Layout/index";
-export const footerMenu: FooterMenu[] = [
-    {
-      name: "记账",
-      icon: "../../static/img/footer/1.png",
-      checkIcon: "../../static/img/footer/1-check.png",
-      check: false,
-      url: "/pages/index/index",
-    },
-    {
-      name: "统计",
-      icon: "../../static/img/footer/2.png",
-      checkIcon: "../../static/img/footer/2-check.png",
-      check: false,
-      url: "/pages/index/index",
-    },
-    {
-      name: "",
-      icon: "../../static/img/footer/add.png",
-      checkIcon: "../../static/img/footer/add.png",
-      check: false,
-    },
-    {
-      name: "账单",
-      icon: "../../static/img/footer/3.png",
-      checkIcon: "../../static/img/footer/3-check.png",
-      check: false,
-      url: "/pages/index/index",
-    },
-    {
-      name: "我的",
-      icon: "../../static/img/footer/4.png",
-      checkIcon: "../../static/img/footer/4-check.png",
-      check: false,
-      url: "/pages/index/index",
-    },
-  ];
+// 头像列表
+export const headerUrlList = [
+  "../../static/image/header/man1.png",
+  "../../static/image/header/man2.png",
+  "../../static/image/header/man3.png",
+  "../../static/image/header/man4.png",
+  "../../static/image/header/man5.png",
+  "../../static/image/header/woman1.png",
+  "../../static/image/header/woman2.png",
+  "../../static/image/header/woman3.png",
+  "../../static/image/header/woman4.png",
+  "../../static/image/header/woman5.png",
+];
