@@ -1,13 +1,18 @@
-import { defineComponent, reactive, toRefs } from "vue";
-import CustomHeader from "../../components/CustomHeader/index.vue";
-import CustomContent from "../../Layout/CustomContent/index.vue";
+import { defineComponent, reactive, toRef, toRefs } from "vue";
+import MyHeader from "./components/header/index.vue";
+import { headerUrlList } from "@/utils/enum";
+import type { UserInfo } from "@/types/pages";
+
 export default defineComponent({
   name: "My",
-  components: { CustomHeader, CustomContent },
+  components: { MyHeader },
   setup() {
-    const data = reactive({});
+    const userInfo: UserInfo = reactive({
+      headerUrl: headerUrlList[0],
+      username: "orange",
+    });
     return {
-      ...toRefs(data),
+      userInfo,
     };
   },
 });

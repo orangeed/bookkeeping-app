@@ -1,8 +1,7 @@
 <!-- 记账 -->
 <template>
-  <CustomHeader />
-  记账
-  <!-- <CustomContent> 记账 </CustomContent> -->
+	<CustomHeader />
+	记账
 </template>
 
 <script lang="ts" src="./index.ts" />

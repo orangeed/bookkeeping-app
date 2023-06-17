@@ -12,19 +12,17 @@
       :key="index"
       @click.stop="handleChangeRouter(index)"
     >
-      <img :src="item.check ? item.checkIcon : item.icon" />
-      <span :style="{color:item.check?var('--theme-color'):'#000'}">{{
-        item.name
-      }}</span>
+      <image :src="item.check ? item.checkIcon : item.icon"></image>
+      <span>{{ item.name }}</span>
     </div>
   </div>
 </template>
 
 <script lang="ts" name="CustomContent" setup>
-const platform: string = uni.getSystemInfoSync().platform;
 import { ref } from "vue";
-import type { FooterMenu } from "../../types/Layout/index";
 import type { Ref } from "vue";
+import type { FooterMenu } from "../../types/Layout/index";
+const platform: string = uni.getSystemInfoSync().platform;
 const footerMenu: Ref<FooterMenu[]> = ref([
   {
     name: "记账",
@@ -67,7 +65,7 @@ const emit = defineEmits(["currentIndex"]);
 // 跳转页面
 const handleChangeRouter = (index?: number) => {
   emit("currentIndex", index);
-  footerMenu.value.forEach((v: any, i: number) => {
+  footerMenu.value.forEach((v, i) => {
     v.check = i === index;
   });
 };

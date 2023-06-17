@@ -1,10 +1,10 @@
 <!-- 自定义Content -->
 <template>
   <div class="content">
-    <Bookkeeping v-show="currentIndex === 0" />
-    <Statistics v-show="currentIndex === 1" />
-    <Bill v-show="currentIndex === 3" />
-    <My v-show="currentIndex === 4" />
+    <Bookkeeping v-if="currentIndex === 0" />
+    <Statistics v-if="currentIndex === 1" />
+    <Bill v-if="currentIndex === 3" />
+    <My v-if="currentIndex === 4" />
   </div>
   <CustomFooter @currentIndex="handleGetIndex" />
 </template>
@@ -19,10 +19,10 @@ import type { Ref } from "vue";
 import { ref } from "vue";
 
 // 获取当前索引值
-const currentIndex: Ref<number> = ref(0);
+const currentIndex: Ref<number> = ref(4);
 const handleGetIndex = (index: number) => {
   console.log(index);
-  currentIndex.value = index
+  currentIndex.value = index;
 };
 </script>
 <style lang="scss" scoped>

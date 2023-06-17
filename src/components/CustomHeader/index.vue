@@ -2,7 +2,7 @@
 <template>
   <div class="header">
     <span class="title"> 记账 </span>
-    <img src="../../static/img/footer/face.png" class="face" />
+    <image src="../../static/image/footer/face.png" class="face" />
     <uni-section class="header-ledger" type="line">
       <uni-data-select
         v-model="currendLedger"

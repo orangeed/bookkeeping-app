@@ -1,8 +1,6 @@
 <!-- 我的 -->
 <template>
-  <CustomHeader />
-  <!-- <CustomContent> 我的 </CustomContent> -->
-  我的
+  <MyHeader :userInfo="userInfo"/>
 </template>
 
 <script lang="ts" src="./index.ts" />
