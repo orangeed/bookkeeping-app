@@ -13,20 +13,63 @@
       @click.stop="handleChangeRouter(index)"
     >
       <img :src="item.check ? item.checkIcon : item.icon" />
-      <span>{{ item.name }}</span>
+      <span :style="{color:item.check?var('--theme-color'):'#000'}">{{
+        item.name
+      }}</span>
     </div>
   </div>
 </template>
 
 <script lang="ts" name="CustomContent" setup>
-import { footerMenu } from "../../utils/enum";
 const platform: string = uni.getSystemInfoSync().platform;
+import { ref } from "vue";
+import type { FooterMenu } from "../../types/Layout/index";
+import type { Ref } from "vue";
+const footerMenu: Ref<FooterMenu[]> = ref([
+  {
+    name: "记账",
+    icon: "../../static/img/footer/1.png",
+    checkIcon: "../../static/img/footer/1-check.png",
+    check: false,
+    url: "/pages/index/index",
+  },
+  {
+    name: "统计",
+    icon: "../../static/img/footer/2.png",
+    checkIcon: "../../static/img/footer/2-check.png",
+    check: false,
+    url: "/pages/index/index",
+  },
+  {
+    name: "",
+    icon: "../../static/img/footer/add.png",
+    checkIcon: "../../static/img/footer/add.png",
+    check: false,
+  },
+  {
+    name: "账单",
+    icon: "../../static/img/footer/3.png",
+    checkIcon: "../../static/img/footer/3-check.png",
+    check: false,
+    url: "/pages/index/index",
+  },
+  {
+    name: "我的",
+    icon: "../../static/img/footer/4.png",
+    checkIcon: "../../static/img/footer/4-check.png",
+    check: false,
+    url: "/pages/index/index",
+  },
+]);
 
 const emit = defineEmits(["currentIndex"]);
 
 // 跳转页面
 const handleChangeRouter = (index?: number) => {
   emit("currentIndex", index);
+  footerMenu.value.forEach((v: any, i: number) => {
+    v.check = i === index;
+  });
 };
 </script>
 <style lang="scss" scoped>
